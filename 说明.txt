@@ -1,0 +1,29 @@
+
+648dim_extract_features   xx.m4a
+
+stego.wav是stego.aac边提取边AAC解码得到的，
+保留stego.wav便于和cover.wav对比，测音质
+STC提取用法：x-channel-extract_STC xx.aac
+
+
+两种失真函数：cost_fuc_Xmin，cost_fuc_Tf
+用法示例：cost_fuc_Xmin covername.wav
+
+
+STC嵌入函数：embed_STC是利用（matlab生成的exe输出的stego：Sqmdct.txt）来嵌入。
+用法示例：embed_STC   -o covername-cost_fuc_name-payload.aac     covername.wav
+
+
+
+audio：2000个wav（48 Khz,双声道，5s）
+STC隐写：faac、faaD、STC-mtb
+测音质：peaq
+隐写分析：提取特征、ensembleClassifier
+
+
+剪切
+move Cover-1.wav .\audio
+复制
+copy Cover-1.aac .\audio
+彻底删除
+del xxx
